@@ -1,5 +1,11 @@
 extends base
 
 block meta
-  - var pageClass = 'main-page';
-  - var title = 'Главная';
+  - var title = 'Список страниц';
+
+block wrapper
+  - var pages = [{alias: 'main.html', title: 'Главная'},{alias: 'service-1.html', title: 'Автомойка Люкс'},{alias: 'service-2.html', title: 'Автомойка Суперлюкс'},{alias: 'service-3.html', title: 'Однофазная мойка кузова'},{alias: 'service-4.html', title: 'Двухфазная мойка кузова'},{alias: 'service-5.html', title: 'Уборка салона'},{alias: 'service-6.html', title: 'Другие услуги'},{alias: 'service-7.html', title: 'Химчистка'},{alias: 'service-8.html', title: 'Полировка кузова'},{alias: 'service-9.html', title: 'Нанесение керамики'},{alias: 'service-10.html', title: 'Мойка иного транспорта'}]
+  ol.p-5
+    each pages__item in pages
+      li.mb-3(style="list-style:decimal;")
+        a.tdec-underline(href=(pages__item.alias) target="_blank") #{pages__item.title}
