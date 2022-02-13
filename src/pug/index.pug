@@ -3,9 +3,13 @@ extends base
 block meta
   - var title = 'Список страниц';
 
+block header
+
 block wrapper
-  - var pages = [{alias: 'main.html', title: 'Главная'},{alias: 'service-1.html', title: 'Автомойка Люкс'},{alias: 'service-2.html', title: 'Автомойка Суперлюкс'},{alias: 'service-3.html', title: 'Однофазная мойка кузова'},{alias: 'service-4.html', title: 'Двухфазная мойка кузова'},{alias: 'service-5.html', title: 'Уборка салона'},{alias: 'service-6.html', title: 'Другие услуги'},{alias: 'service-7.html', title: 'Химчистка'},{alias: 'service-8.html', title: 'Полировка кузова'},{alias: 'service-9.html', title: 'Нанесение керамики'},{alias: 'service-10.html', title: 'Мойка иного транспорта'}]
+  - var pages = [{alias: 'main.html', title: 'Главная'},{alias: 'service1.html', title: 'Автомойка Люкс'},{alias: 'service2.html', title: 'Автомойка Суперлюкс'},{alias: 'service3.html', title: 'Однофазная мойка кузова'},{alias: 'service4.html', title: 'Двухфазная мойка кузова'},{alias: 'service5.html', title: 'Уборка салона'},{alias: 'service6.html', title: 'Другие услуги'},{alias: 'service7.html', title: 'Химчистка'},{alias: 'service8.html', title: 'Полировка кузова'},{alias: 'service9.html', title: 'Нанесение керамики'},{alias: 'service10.html', title: 'Мойка иного транспорта'}]
   ol.p-5
     each pages__item in pages
       li.mb-3(style="list-style:decimal;")
         a.tdec-underline(href=(pages__item.alias) target="_blank") #{pages__item.title}
+
+block footer

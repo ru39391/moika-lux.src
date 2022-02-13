@@ -1,6 +1,29 @@
-mixin image(picpath, classname="img-fluid")
-  img(class=classname src=`../img/${picpath}` alt="")
+mixin img(img__path, img__classname="img-fluid", img__type="true")
+  picture
+    //- source(type="image/webp" srcset=`/img/${img__path}.webp`)
+    if (img__type)
+      source(type="image/jpeg" srcset=`/img/${img__path}.jpg`)
+      img(class=img__classname src=`/img/${img__path}.jpg` alt="")
+    else
+      source(type="image/png" srcset=`/img/${img__path}.png`)
+      img(class=img__classname src=`/img/${img__path}.png` alt="")
 
-mixin icon(icon, classname="icon-fluid")
-  svg(class=classname)
-    use(xlink:href=`/img/icons/icons.svg#icon-${icon}`)
+
+mixin icon(icon__name, icon__classname="icon-fluid")
+  svg(class=icon__classname)
+    use(xlink:href=`/img/icons/icons.svg#icon-${icon__name}`)
+
+mixin promo(promo__title, promo__desc, promo__bg)
+  .promo
+    +img(`content/top/${promo__bg}`,'promo__bg')
+    .container
+      .row
+        .col-md-6.offset-md-1
+          .promo__title!= promo__title
+          .promo__desc!= promo__desc
+      .row
+        nav.social.col-md-3.offset-md-1
+          a.social__item(href="#")
+            +icon('social-wapp')
+          a.social__item(href="#")
+            +icon('social-tg')

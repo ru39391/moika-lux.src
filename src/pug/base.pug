@@ -16,17 +16,93 @@ html(lang="ru")
 
     //- link(href="../img/favicon.ico" rel="shortcut icon")
 
-  body(class=pageClass)    
+  body(class=pageClass)
     block header
-      include base/header.pug
+      header.header
+        .container.d-flex.flex-wrap.px-0
+          .col-md-2
+            a.logo(href="/")
+              +icon('logo')
+          .col-md-10.d-flex.flex-wrap
+            nav.header__menu
+              a.header__menu-link(href="#") Комплексная мойка
+              a.header__menu-link(href="#") Химчистка
+              a.header__menu-link(href="#") Полировка кузова
+              a.header__menu-link(href="#") Все услуги &gt;
+            .contacts
+              div.contacts__item
+                span.contacts__item-icon
+                  +icon('placemark')
+                | м. Ладожская
+                br
+                | пр. Ириновский, 14к1; лит Б
+              a.contacts__item.font-weight-bold(href="tel:+79111887575")
+                span.contacts__item-icon
+                  +icon('phone')
+                | +7 (911) 188-75-75
+
+    block promo
 
     block wrapper
-      section.wrapper
-        h1 #{title}
+      .section
+        .container.d-flex.px-0
+          .col-md-8.offset-md-2
+            .section__title Запишитесь прямо сейчас
+            .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
+            form#feedback.form(action="#" method="post")
+              .form__row
+                .form__item
+                  input#feedback__name.form__field(type="text" value="" name="feedback__name" placeholder="Ваше имя")
+                .form__item
+                  input#feedback__phone.form__field(type="text" value="" name="feedback__phone" placeholder="Телефон")
+                .form__item
+                  input#feedback__nospam.form__checkbox(type="checkbox" checked)
+                  label.form__label.form__label_el_checkbox(for="feedback__nospam")
+                    span.form__toggler.form__toggler_el_checkbox
+                      +icon('checked')
+                    | Я не робот
+                .form__item
+                  button.btn(type="button") записаться
+              .row
+                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей 
+                  a.tdec-underline(href="#") политикой конфиденциальности.
+
+      .map
+
+      .section.d-flex
+        .section__bg
+          +img('content/bottom/washing')
+        .container.d-flex.px-0
+          .content.col-md-5.offset-md-7
+            h1 Автомойка
+            p Чистка салона автомобиля – это такая же важная часть ухода за «железным конем», как и его мойка. Салон – это весьма эксплуатируемая часть машины. В нем перевозят грузы, хранят полезные для автомобилиста безделушки, перевозят детей, которые не всегда отличаются аккуратностью, и домашних животных.
+            p По коврикам топчутся в любую погоду, рискуя испортить грязью «родную» обивку пола. Все это приводит к необходимости регулярно проводить уборку салона.Разумеется, ее можно сделать и самостоятельно, но это потребует затрат сил, времени и денег, ведь для уборки потребуется автомобильная химия.
 
     block footer
-      include base/footer.pug
+      - var services = ['Комплексная мойка Люкс','Комплексная мойка Суперлюкс','Однофазная мойка кузова','Двухфазная мойка кузова','Уборка салона','Химчистка','Полировка кузова','Нанесение керамики','Мойка иного транспорта','Другие услуги'];
+      footer.footer
+        .container.d-flex.flex-wrap.px-0
+          nav.footer__nav.col-md-6.offset-md-1
+            each services__item in services
+              a.footer__nav-link(href="#") #{services__item}
+          .col-md-4.offset-md-1
+            a.logo(href="/")
+              +icon('logo')
+            nav.social
+              a.social__item(href="#")
+                +icon('social-wapp')
+                span.tdec-underline WhatsApp
+              a.social__item(href="#")
+                +icon('social-tg')
+                span.tdec-underline Telegram
+            .contacts
+              a.contacts__item(href="tel:+79111887575")
+                +icon('phone')
+                | +7 (911) 188-75-75
+              div.contacts__item
+                +icon('placemark')
+                | пр. Ириновский, 14к1; лит Б
 
-    script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
-    script(src="https://unpkg.com/swiper@5.4.1/js/swiper.min.js")
+      script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
+      script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
+      script(src="https://unpkg.com/swiper@5.4.1/js/swiper.min.js")

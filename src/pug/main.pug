@@ -1,5 +1,39 @@
 extends base
 
 block meta
-  - var pageClass = 'main-page';
   - var title = 'Главная';
+
+block promo
+  .promo
+    +img(`content/top/top`,'promo__bg')
+    .container.d-flex.flex-wrap.px-0
+      .col-md-6.offset-md-1
+        .row
+          .col-md-6.offset-md-1
+            .promo__title Современная автомойка в Санкт-Петербурге
+        .row
+          nav.social.col-md-3.offset-md-1
+            a.social__item(href="#")
+              +icon('social-wapp')
+            a.social__item(href="#")
+              +icon('social-tg')
+      .col-md-4
+        form#mainform.form(action="#" method="post")
+          .form__row
+            .form__item
+              input#mainform__name.form__field(type="text" value="" name="mainform__name" placeholder="Ваше имя")
+            .form__item
+              input#mainform__phone.form__field(type="text" value="" name="mainform__phone" placeholder="Телефон")
+            .form__item
+              input#mainform__nospam.form__checkbox(type="checkbox" checked)
+              label.form__label.form__label_el_checkbox(for="mainform__nospam")
+                span.form__toggler.form__toggler_el_checkbox
+                  +icon('checked')
+                | Я не робот
+            .form__item
+              button.btn(type="button") записаться
+          .row
+            .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей 
+              a.tdec-underline(href="#") политикой конфиденциальности.
+
+block wrapper
