@@ -37,12 +37,6 @@
     }
 }
 
-%title-default {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: $font-family__title;
-}
-
 %text-default {
     @include fs-lh($font-size__default,$line-height__content);
 }

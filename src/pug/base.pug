@@ -18,8 +18,8 @@ html(lang="ru")
 
   body(class=pageClass)
     block header
-      header.header
-        .container.d-flex.flex-wrap.px-0
+      header.header.d-none
+        .wrapper.d-flex.flex-wrap.px-0
           .col-md-2
             a.logo(href="/")
               +icon('logo')
@@ -45,7 +45,7 @@ html(lang="ru")
 
     block wrapper
       .section
-        .container.d-flex.px-0
+        .wrapper.d-flex.px-0
           .col-md-8.offset-md-2
             .section__title Запишитесь прямо сейчас
             .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
@@ -72,7 +72,7 @@ html(lang="ru")
       .section.d-flex
         .section__bg
           +img('content/bottom/washing')
-        .container.d-flex.px-0
+        .wrapper.d-flex.px-0
           .content.col-md-5.offset-md-7
             h1 Автомойка
             p Чистка салона автомобиля – это такая же важная часть ухода за «железным конем», как и его мойка. Салон – это весьма эксплуатируемая часть машины. В нем перевозят грузы, хранят полезные для автомобилиста безделушки, перевозят детей, которые не всегда отличаются аккуратностью, и домашних животных.
@@ -81,7 +81,7 @@ html(lang="ru")
     block footer
       - var services = ['Комплексная мойка Люкс','Комплексная мойка Суперлюкс','Однофазная мойка кузова','Двухфазная мойка кузова','Уборка салона','Химчистка','Полировка кузова','Нанесение керамики','Мойка иного транспорта','Другие услуги'];
       footer.footer
-        .container.d-flex.flex-wrap.px-0
+        .wrapper.d-flex.flex-wrap.px-0
           nav.footer__nav.col-md-6.offset-md-1
             each services__item in services
               a.footer__nav-link(href="#") #{services__item}

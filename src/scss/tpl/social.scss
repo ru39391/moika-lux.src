@@ -1,0 +1,22 @@
+.social {
+  display: flex;
+  justify-content: space-between
+}
+
+.social__item {
+  @extend %flex-center;
+  color: #fff;
+}
+
+.social__icon {
+  @include wh(18px);
+  @include fw(18px);
+  margin: 0 10px 0 0;
+}
+
+.social__title {
+  @extend .color-white;
+  @include font(14px,500);
+  line-height: 18px;
+  text-decoration: underline;
+}
