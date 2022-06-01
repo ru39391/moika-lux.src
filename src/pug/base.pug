@@ -76,7 +76,7 @@ html(lang="ru")
                   li
                     a.panel__menu-link(href="#") Другие услуги
               .col-xl-4.offset-xl-1.zi-2
-                nav.social.flex-column
+                nav.social
                   a.social__item.mb-4(href="#")
                     +icon('social-wapp','social__icon')
                     span.social__title WhatsApp
@@ -136,26 +136,29 @@ html(lang="ru")
       - var services = ['Комплексная мойка Люкс','Комплексная мойка Суперлюкс','Однофазная мойка кузова','Двухфазная мойка кузова','Уборка салона','Химчистка','Полировка кузова','Нанесение керамики','Мойка иного транспорта','Другие услуги'];
       footer.footer
         .wrapper.d-flex.flex-wrap.px-0
-          nav.footer__nav.col-md-6.offset-md-1
-            each services__item in services
-              a.footer__nav-link(href="#") #{services__item}
-          .col-md-4.offset-md-1
-            a.logo(href="/")
-              +icon('logo')
-            nav.social
-              a.social__item(href="#")
-                +icon('social-wapp')
-                span.tdec-underline WhatsApp
-              a.social__item(href="#")
-                +icon('social-tg')
-                span.tdec-underline Telegram
+          nav.col-xl-6.col-lg-7.col-md-8.offset-xl-1
+            ul.footer__nav
+              each services__item in services
+                li
+                  a.footer__nav-link(href="#") #{services__item}
+          .col-md-4.offset-lg-1
+            a.logo.color-white.mb-2(href="/")
+              +icon('logo','logo__icon logo__icon_lg')
+            .social.d-flex
+              a.social__item.mb-2.mr-3(href="#")
+                +icon('social-wapp','social__icon')
+                span.social__title.color-white WhatsApp
+              a.social__item.mb-2(href="#")
+                +icon('social-tg','social__icon')
+                span.social__title.color-white Telegram
             .contacts
-              a.contacts__item(href="tel:+79111887575")
-                +icon('phone')
-                | +7 (911) 188-75-75
-              .contacts__item
-                +icon('placemark')
+              a.contacts__item.mb-2(href="tel:+79111887575")
+                +icon('phone','contacts__icon color-brand-light')
+                span.font-weight-bold.color-white +7 (911) 188-75-75
+              .contacts__item.mb-2
+                +icon('placemark','contacts__icon color-brand-light')
                 | пр. Ириновский, 14к1; лит Б
+            a.footer__link(href="#") Политика конфиденциальности
 
       script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
       script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")

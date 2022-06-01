@@ -1,8 +1,3 @@
-.social {
-  display: flex;
-  justify-content: space-between
-}
-
 .social__item {
   @extend %flex-center;
 }

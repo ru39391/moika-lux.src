@@ -10,4 +10,8 @@
   @include media-breakpoint-down(lg) {
     @include wh(130px,45px);
   }
+
+  &.logo__icon_lg {
+    @include wh(200px,70px);
+  }
 }
