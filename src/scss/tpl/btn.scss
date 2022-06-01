@@ -19,4 +19,8 @@
   background: -webkit-linear-gradient(-45deg,  #29a9e0 0%,#63cef5 42%,#29a9e0 60%,#29a9e0 100%);
   background: linear-gradient(135deg,  #29a9e0 0%,#63cef5 42%,#29a9e0 60%,#29a9e0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29a9e0', endColorstr='#29a9e0',GradientType=1 );
+
+  &.btn_mw_initial {
+    max-width: initial;
+  }
 }

@@ -1,0 +1,73 @@
+.form__row {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-column-gap: (100%/8);
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.form__item {
+  @include media-breakpoint-up(sm) {
+    margin: 0 0 24px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    margin: 0 0 16px;
+  }
+}
+
+.form__field {
+  @include wh(100%,40px);
+  @include fs-lh(14px,1.2);
+  padding: 4px 16px;
+  border-radius: 8px;
+  color: $color__default;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid $color__default;
+}
+
+.form__label {
+  @include fs-lh(14px,1.2);
+  color: $color__default;
+
+  &.form__label_el_checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.form__toggler {
+  &.form__toggler_el_checkbox {
+    @include fw(22px);
+    @include wh(22px);
+    @include offset(0 8px 0 0,1px 3px);
+    border-radius: 8px;
+    border: 1px solid $color__default;
+  }
+}
+
+.form__checked {
+  opacity: 0;
+}
+
+.form__checkbox {
+  @include wh(0);
+  @include pos(0,0);
+  opacity: 0;
+  pointer-events: none;
+
+  &:checked + .form__label_el_checkbox {
+    .form__checked {
+      opacity: 1;
+    }
+  }
+}
+
+.form__footer {
+  @include fs-lh(12px,1.2);
+
+  @include media-breakpoint-only(xs) {
+    text-align: center;
+  }
+}

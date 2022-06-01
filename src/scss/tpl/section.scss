@@ -1,0 +1,42 @@
+.section {
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
+
+  @include media-breakpoint-up(sm) {
+    @include py(40px,60px);
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include py(16px,24px);
+  }
+}
+
+.section__title {
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: $color__brand;
+
+  @include media-breakpoint-up(sm) {
+    @include font(36px,700);
+    text-align: center;
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include font(24px,700);
+  }
+}
+
+.section__subtitle {
+  @include font(18px,700);
+  line-height: 1.2;
+
+  @include media-breakpoint-up(sm) {
+    color: $color__default;
+    text-align: center;
+    margin: 0 0 36px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    color: $color__brand;
+    margin: 0 0 16px;
+  }
+}

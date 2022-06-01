@@ -98,11 +98,12 @@ html(lang="ru")
     block promo
 
     block wrapper
-      .section
+      .section.bg-light
+        .wrapper
+          .section__title Запишитесь прямо сейчас
+          .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
         .wrapper.d-flex.px-0
-          .col-md-8.offset-md-2
-            .section__title Запишитесь прямо сейчас
-            .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
+          .col-xl-8.offset-xl-2.col-md-10.offset-md-1
             form#feedback.form(action="#" method="post")
               .form__row
                 .form__item
@@ -113,12 +114,12 @@ html(lang="ru")
                   input#feedback__nospam.form__checkbox(type="checkbox" checked)
                   label.form__label.form__label_el_checkbox(for="feedback__nospam")
                     span.form__toggler.form__toggler_el_checkbox
-                      +icon('checked')
+                      +icon('checked','form__checked icon-fluid')
                     | Я не робот
                 .form__item
-                  button.btn(type="button") записаться
+                  button.btn.btn_mw_initial(type="button") записаться
               .row
-                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей
+                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
                   a.tdec-underline(href="#") политикой конфиденциальности.
 
       .map
@@ -160,6 +161,7 @@ html(lang="ru")
                 | пр. Ириновский, 14к1; лит Б
             a.footer__link(href="#") Политика конфиденциальности
 
+//-
       script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
       script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
       script(src="https://unpkg.com/swiper@5.4.1/js/swiper.min.js")
