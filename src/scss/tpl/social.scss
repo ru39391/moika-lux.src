@@ -5,7 +5,6 @@
 
 .social__item {
   @extend %flex-center;
-  color: #fff;
 }
 
 .social__icon {
@@ -15,7 +14,6 @@
 }
 
 .social__title {
-  @extend .color-white;
   @include font(14px,500);
   line-height: 18px;
   text-decoration: underline;

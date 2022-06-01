@@ -19,13 +19,13 @@ mixin promo(promo__title, promo__desc, promo__bg)
       +img(`content/top/${promo__bg}`,'promo__cover')
     .wrapper
       .row
-        .promo__title.col-md-11.offset-md-1!= promo__title        
+        .promo__title.col-md-11.offset-md-1!= promo__title
         .promo__desc.col-xl-6.col-lg-8.col-md-9.offset-md-1!= promo__desc
       .row
         nav.social.col-xl-3.col-md-4.col-sm-6.col-10.offset-md-1
           a.social__item(href="#")
             +icon('social-wapp','social__icon')
-            span.social__title WhatsApp
+            span.social__title.color-white WhatsApp
           a.social__item(href="#")
             +icon('social-tg','social__icon')
-            span.social__title Telegram
+            span.social__title.color-white Telegram

@@ -1,0 +1,90 @@
+.header {
+  @include pos(0,0,fixed);
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1040;
+  transition: all .3s ease;
+
+  &.header_active {
+    background-color: $color__default;
+    box-shadow: 1px 1px 8px rgba(2, 26, 99, 0.7);
+
+    .header__contacts-holder {
+      @include media-breakpoint-up(xl) {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
+    .header__btn-holder {
+      @include media-breakpoint-up(xl) {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+}
+
+.header__menu {
+  @include media-breakpoint-up(xl) {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.header__menu-link {
+  @include color(#fff);
+  @include font(14px,600);
+  @include inline-block;
+  line-height: 1.2;
+  margin: 0 12px 0 0;
+}
+
+.header__aside {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include media-breakpoint-up(xl) {
+    flex-grow: 1;
+  }
+}
+
+.header__contacts-holder {
+  @include fw(100%);
+  transition: all .3s ease;
+}
+
+.header__btn-holder {
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    transition: all .3s ease;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.header__toggler {
+  @extend %btn-default;
+  @include wh(32px);
+  @include fw(32px);
+  padding: 6px;
+  border-radius: 50%;
+  background-color: $color__brand;
+}

@@ -56,6 +56,18 @@ button {
   @include color(#fff !important);
 }
 
+.color-brand {
+  @include color($color__brand !important);
+}
+
+.color-brand-light {
+  @include color($color__brand_light !important);
+}
+
+.font-weight-semibold {
+  font-weight: 500;
+}
+
 .tdec-none {
   text-decoration: none;
 
@@ -95,23 +107,23 @@ button {
 }
 
 .w-auto {
-  width: auto !important; 
+  width: auto !important;
 }
 
 .w-100 {
-  width: 100% !important; 
+  width: 100% !important;
 }
 
 .h-100 {
-  height: 100% !important; 
+  height: 100% !important;
 }
 
 .h-auto {
-  height: auto !important; 
+  height: auto !important;
 }
 
 .h-100vh {
-  height: 100vh !important; 
+  height: 100vh !important;
 }
 
 .h1 {

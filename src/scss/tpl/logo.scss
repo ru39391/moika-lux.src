@@ -1,0 +1,13 @@
+.logo {
+  @include inline-block;
+}
+
+.logo__icon {
+  @include media-breakpoint-up(xl) {
+    @include wh(182px,64px);
+  }
+
+  @include media-breakpoint-down(lg) {
+    @include wh(130px,45px);
+  }
+}

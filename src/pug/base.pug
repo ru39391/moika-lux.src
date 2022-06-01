@@ -18,28 +18,82 @@ html(lang="ru")
 
   body(class=pageClass)
     block header
-      header.header.d-none
-        .wrapper.d-flex.flex-wrap.px-0
-          .col-md-2
-            a.logo(href="/")
-              +icon('logo')
-          .col-md-10.d-flex.flex-wrap
+      header.header
+        .wrapper.d-flex.align-items-center.px-0
+          .col-xl-2
+            a.logo.color-white(href="/")
+              +icon('logo','logo__icon')
+          .col-xl-10.d-flex.align-items-center.justify-content-end.justify-content-xl-start
             nav.header__menu
               a.header__menu-link(href="#") Комплексная мойка
               a.header__menu-link(href="#") Химчистка
               a.header__menu-link(href="#") Полировка кузова
-              a.header__menu-link(href="#") Все услуги &gt;
-            .contacts
-              div.contacts__item
-                span.contacts__item-icon
-                  +icon('placemark')
-                | м. Ладожская
-                br
-                | пр. Ириновский, 14к1; лит Б
-              a.contacts__item.font-weight-bold(href="tel:+79111887575")
-                span.contacts__item-icon
-                  +icon('phone')
-                | +7 (911) 188-75-75
+              a.header__menu-link(href="#" data-toggle="toggler" data-target="#panel") Все услуги &gt;
+            .header__aside
+              button.header__toggler.d-block.d-xl-none.mr-3(type="button" data-toggle="toggler" data-target="#panel")
+                +icon('menu')
+              .header__contacts-holder
+                .contacts.d-flex.flex-wrap.align-items-center.justify-content-xl-between
+                  .contacts__item.color-white.mr-3.mr-xl-0
+                    span.contacts__item-icon.color-white
+                      +icon('placemark')
+                    span.contacts__item-caption
+                      | м. Ладожская
+                      br
+                      | пр. Ириновский, 14к1; лит Б
+                  a.contacts__item.color-white(href="tel:+79111887575")
+                    span.contacts__item-icon
+                      +icon('phone')
+                    span.contacts__item-caption.contacts__item-caption_font_bold +7 (911) 188-75-75
+              .header__btn-holder
+                button.btn(type="button") записаться
+        #panel.panel
+          .wrapper.d-flex.flex-column.pos-rel.h-100.px-0
+            .panel__header
+              a.logo(href="/")
+                +icon('logo','logo__icon')
+            .d-flex.flex-column.flex-xl-row.flex-xl-wrap.justify-content-between.flex-grow-1
+              nav.col-xl-6.offset-xl-1.zi-2
+                ul.panel__menu
+                  li
+                    a.panel__menu-link(href="#") Комплексная мойка Люкс
+                  li
+                    a.panel__menu-link(href="#") Химчистка
+                  li
+                    a.panel__menu-link(href="#") Комплексная мойка Суперлюкс
+                  li
+                    a.panel__menu-link(href="#") Полировка кузова
+                  li
+                    a.panel__menu-link(href="#") Однофазная мойка кузова
+                  li
+                    a.panel__menu-link(href="#") Нанесение керамики
+                  li
+                    a.panel__menu-link(href="#") Двухфазная мойка кузова
+                  li
+                    a.panel__menu-link(href="#") Мойка иного транспорта
+                  li
+                    a.panel__menu-link(href="#") Уборка салона
+                  li
+                    a.panel__menu-link(href="#") Другие услуги
+              .col-xl-4.offset-xl-1.zi-2
+                nav.social.flex-column
+                  a.social__item.mb-4(href="#")
+                    +icon('social-wapp','social__icon')
+                    span.social__title WhatsApp
+                  a.social__item.mb-4(href="#")
+                    +icon('social-tg','social__icon')
+                    span.social__title Telegram
+                .contacts.flex-column.align-items-start
+                  a.contacts__item.mb-4(href="tel:+79111887575")
+                    +icon('phone','contacts__icon color-brand-light')
+                    span.font-weight-semibold +7 (911) 188-75-75
+                  .contacts__item
+                    +icon('placemark','contacts__icon color-brand-light')
+                    span.font-weight-semibold пр. Ириновский, 14к1; лит Б
+              .panel__footer.col-xl-7
+                +icon('bg-bubbles')
+              button.panel__close(type="button" data-toggle="close")
+                +icon('close')
 
     block promo
 
@@ -64,7 +118,7 @@ html(lang="ru")
                 .form__item
                   button.btn(type="button") записаться
               .row
-                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей 
+                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей
                   a.tdec-underline(href="#") политикой конфиденциальности.
 
       .map
@@ -99,7 +153,7 @@ html(lang="ru")
               a.contacts__item(href="tel:+79111887575")
                 +icon('phone')
                 | +7 (911) 188-75-75
-              div.contacts__item
+              .contacts__item
                 +icon('placemark')
                 | пр. Ириновский, 14к1; лит Б
 
