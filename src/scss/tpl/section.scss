@@ -8,26 +8,30 @@
   @include media-breakpoint-only(xs) {
     @include py(16px,24px);
   }
+
+  &.section_pt_none {
+    @include media-breakpoint-down(md) {
+      padding-top: 0;
+    }
+  }
 }
 
 .section__title {
-  line-height: 1.2;
   margin: 0 0 8px;
   color: $color__brand;
 
   @include media-breakpoint-up(sm) {
-    @include font(36px,700);
+    @include h2;
     text-align: center;
   }
 
   @include media-breakpoint-only(xs) {
-    @include font(24px,700);
+    @include h3;
   }
 }
 
 .section__subtitle {
-  @include font(18px,700);
-  line-height: 1.2;
+  @include h4;
 
   @include media-breakpoint-up(sm) {
     color: $color__default;
@@ -37,6 +41,18 @@
 
   @include media-breakpoint-only(xs) {
     color: $color__brand;
+    margin: 0 0 16px;
+  }
+}
+
+.section__bg {
+  @include media-breakpoint-up(lg) {
+    @include pos(0,0);
+    @include wh(50%,100%);
+  }
+
+  @include media-breakpoint-down(md) {
+    @include wh(100%,204px);
     margin: 0 0 16px;
   }
 }

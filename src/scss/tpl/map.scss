@@ -1,0 +1,9 @@
+.map {
+  @include media-breakpoint-up(sm) {
+    height: 480px;
+  }
+
+  @include media-breakpoint-only(xs) {
+    height: 320px;
+  }
+}

@@ -98,7 +98,7 @@ html(lang="ru")
     block promo
 
     block wrapper
-      .section.bg-light
+      .section.bg-light.zi-2
         .wrapper
           .section__title Запишитесь прямо сейчас
           .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
@@ -122,13 +122,14 @@ html(lang="ru")
                 .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
                   a.tdec-underline(href="#") политикой конфиденциальности.
 
-      .map
+      .map.zi-1
+        script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&amp;amp;width=100%25&amp;amp;height=460&amp;amp;lang=ru_RU&amp;amp;scroll=false")
 
-      .section.d-flex
+      .section.section_pt_none.d-flex.flex-wrap.pos-rel
         .section__bg
-          +img('content/bottom/washing')
-        .wrapper.d-flex.px-0
-          .content.col-md-5.offset-md-7
+          +img('content/bottom/washing','img-cover')
+        .wrapper.d-flex
+          .content.col-lg-5.offset-lg-7
             h1 Автомойка
             p Чистка салона автомобиля – это такая же важная часть ухода за «железным конем», как и его мойка. Салон – это весьма эксплуатируемая часть машины. В нем перевозят грузы, хранят полезные для автомобилиста безделушки, перевозят детей, которые не всегда отличаются аккуратностью, и домашних животных.
             p По коврикам топчутся в любую погоду, рискуя испортить грязью «родную» обивку пола. Все это приводит к необходимости регулярно проводить уборку салона.Разумеется, ее можно сделать и самостоятельно, но это потребует затрат сил, времени и денег, ведь для уборки потребуется автомобильная химия.
@@ -161,7 +162,6 @@ html(lang="ru")
                 | пр. Ириновский, 14к1; лит Б
             a.footer__link(href="#") Политика конфиденциальности
 
-//-
       script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
       script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")
       script(src="https://unpkg.com/swiper@5.4.1/js/swiper.min.js")
