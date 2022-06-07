@@ -1,17 +1,14 @@
 .form__row {
   @include media-breakpoint-up(md) {
     display: grid;
+    grid-row-gap: 24px;
     grid-column-gap: (100%/8);
     grid-template-columns: repeat(2,1fr);
   }
 }
 
 .form__item {
-  @include media-breakpoint-up(sm) {
-    margin: 0 0 24px;
-  }
-
-  @include media-breakpoint-only(xs) {
+  @include media-breakpoint-down(sm) {
     margin: 0 0 16px;
   }
 }

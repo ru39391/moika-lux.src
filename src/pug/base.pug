@@ -98,7 +98,7 @@ html(lang="ru")
     block promo
 
     block wrapper
-      .section.bg-light.zi-2
+      .section.bg-light.box-shadow.zi-2
         .wrapper
           .section__title Запишитесь прямо сейчас
           .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
@@ -117,15 +117,14 @@ html(lang="ru")
                       +icon('checked','form__checked icon-fluid')
                     | Я не робот
                 .form__item
-                  button.btn.btn_mw_initial(type="button") записаться
-              .row
-                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
-                  a.tdec-underline(href="#") политикой конфиденциальности.
+                  button.btn.btn_mw_initial.mb-4(type="button") записаться
+                  .form__footer Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
+                    a.tdec-underline(href="#") политикой конфиденциальности.
 
       .map.zi-1
         script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&amp;amp;width=100%25&amp;amp;height=460&amp;amp;lang=ru_RU&amp;amp;scroll=false")
 
-      .section.section_pt_none.d-flex.flex-wrap.pos-rel
+      .section.section_pt_none.d-flex.flex-wrap.pos-rel.box-shadow
         .section__bg
           +img('content/bottom/washing','img-cover')
         .wrapper.d-flex

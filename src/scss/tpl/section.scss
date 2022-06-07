@@ -1,6 +1,4 @@
 .section {
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
-
   @include media-breakpoint-up(sm) {
     @include py(40px,60px);
   }

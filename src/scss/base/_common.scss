@@ -65,7 +65,7 @@ button {
 }
 
 .bg-light {
-  background-color: $color_light;
+  background-color: $color__light;
 }
 
 .font-weight-semibold {
@@ -160,6 +160,10 @@ button {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
 }
 
 .box-shadow-none {
