@@ -76,7 +76,7 @@ html(lang="ru")
                   li
                     a.panel__menu-link(href="#") Другие услуги
               .col-xl-4.offset-xl-1.zi-2
-                nav.social
+                .social
                   a.social__item.mb-4(href="#")
                     +icon('social-wapp','social__icon')
                     span.social__title WhatsApp
@@ -106,17 +106,17 @@ html(lang="ru")
           .col-xl-8.offset-xl-2.col-md-10.offset-md-1
             form#feedback.form(action="#" method="post")
               .form__row
-                .form__item
+                .form__item.mb-md-0
                   input#feedback__name.form__field(type="text" value="" name="feedback__name" placeholder="Ваше имя")
-                .form__item
+                .form__item.mb-md-0
                   input#feedback__phone.form__field(type="text" value="" name="feedback__phone" placeholder="Телефон")
-                .form__item
+                .form__item.mb-md-0
                   input#feedback__nospam.form__checkbox(type="checkbox" checked)
                   label.form__label.form__label_el_checkbox(for="feedback__nospam")
                     span.form__toggler.form__toggler_el_checkbox
                       +icon('checked','form__checked icon-fluid')
                     | Я не робот
-                .form__item
+                .form__item.mb-md-0
                   button.btn.btn_mw_initial.mb-4(type="button") записаться
                   .form__footer Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
                     a.tdec-underline(href="#") политикой конфиденциальности.

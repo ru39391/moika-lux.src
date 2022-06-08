@@ -14,6 +14,14 @@
   }
 }
 
+.promo__header {
+  margin: -88px 0 32px;
+}
+
+.promo__icon {
+  @include wh(122px,50px);
+}
+
 .promo__title {
   @include media-breakpoint-up(md) {
     @include h1;

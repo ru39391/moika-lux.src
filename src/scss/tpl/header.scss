@@ -1,11 +1,19 @@
 .header {
   @include pos(0,0,fixed);
   width: 100%;
-  padding: 10px 0;
   z-index: 1040;
   transition: all .3s ease;
 
+  @include media-breakpoint-up(md) {
+    padding: 10px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 32px 0 10px;
+  }
+
   &.header_active {
+    padding: 10px 0;
     background-color: $color__default;
     box-shadow: 1px 1px 8px rgba(2, 26, 99, 0.7);
 

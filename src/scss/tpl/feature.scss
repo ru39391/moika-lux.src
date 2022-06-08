@@ -1,0 +1,47 @@
+.feature {
+  text-align: center;
+
+  &:last-child {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 0 44px;
+  }
+}
+
+.feature__icon {
+  margin: 0 0 32px;
+
+  &.feature__icon_type_picture {
+    @include before;
+    height: 236px;
+
+    &:before {
+      @include wh(230px);
+      @include pos(50%,50%);
+      z-index: 1;
+      margin: -115px 0 0 -115px;
+      border-radius: 50%;
+      background: #E8F5FF;
+    }
+  }
+}
+
+.feature__picture {
+  @extend .zi-2;
+  @include wh(100%);
+  object-fit: contain;
+}
+
+.feature__title {
+  @include h4;
+  line-height: 22px;
+  margin: 0 0 8px;
+}
+
+.feature__desc {
+  line-height: 1.3;
+}
