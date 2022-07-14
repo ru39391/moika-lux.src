@@ -33,9 +33,11 @@
   }
 
   &.header_type_sticky {
-    @include media-breakpoint-up(xl) {
-      position: sticky;
-      background-color: $color__default;
+    position: sticky;
+    background-color: $color__default;
+
+    @include media-breakpoint-down(lg) {
+      padding: 10px 0;
     }
   }
 }
@@ -73,8 +75,11 @@
 }
 
 .header__contacts-holder {
-  @include fw(100%);
   transition: all .3s ease;
+
+  @include media-breakpoint-up(xl) {
+    @include fw(100%);
+  }
 }
 
 .header__btn-holder {
