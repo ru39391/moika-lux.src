@@ -31,6 +31,10 @@
       }
     }
   }
+
+  &.header_pos_sticky {
+    position: sticky;
+  }
 }
 
 .header__menu {

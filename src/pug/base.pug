@@ -46,7 +46,7 @@ html(lang="ru")
                       +icon('phone')
                     span.contacts__item-caption.contacts__item-caption_font_bold +7 (911) 188-75-75
               .header__btn-holder
-                button.btn(type="button") записаться
+                button.btn.anchor-scrollto(type="button" data-target="section_form") записаться
         #panel.panel
           .wrapper.d-flex.flex-column.pos-rel.h-100.px-0
             .panel__header
@@ -98,7 +98,7 @@ html(lang="ru")
     block promo
 
     block wrapper
-      .section.bg-light.box-shadow.zi-2
+      .section.section_form.bg-light.box-shadow.zi-2
         .wrapper
           .section__title Запишитесь прямо сейчас
           .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
@@ -111,7 +111,7 @@ html(lang="ru")
                 .form__item.mb-md-0
                   input#feedback__phone.form__field(type="text" value="" name="feedback__phone" placeholder="Телефон")
                 .form__item.mb-md-0
-                  input#feedback__nospam.form__checkbox(type="checkbox" checked)
+                  input#feedback__nospam.form__checkbox.form__checkbox_type_nospam(type="checkbox" checked)
                   label.form__label.form__label_el_checkbox(for="feedback__nospam")
                     span.form__toggler.form__toggler_el_checkbox
                       +icon('checked','form__checked icon-fluid')

@@ -8,6 +8,7 @@ body {
   font: $font-size__default $font-family__default;
   line-height: $line-height__default;
   color: $color__default;
+  min-height: 100vh;
 }
 
 h1 {
@@ -76,6 +77,10 @@ button {
   background-color: $color__light;
 }
 
+.bg-default {
+  background-color: $color__default;
+}
+
 .font-weight-semibold {
   font-weight: 500;
 }
@@ -115,6 +120,7 @@ button {
 .wrapper {
   @include mx(auto);
   @include px(16px);
+  width: 100%;
   max-width: 1280px;
 }
 

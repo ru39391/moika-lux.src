@@ -23,4 +23,9 @@
   &.btn_mw_initial {
     max-width: initial;
   }
+
+  &:disabled {
+    cursor: default;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
