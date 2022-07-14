@@ -32,8 +32,11 @@
     }
   }
 
-  &.header_pos_sticky {
-    position: sticky;
+  &.header_type_sticky {
+    @include media-breakpoint-up(xl) {
+      position: sticky;
+      background-color: $color__default;
+    }
   }
 }
 
