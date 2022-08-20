@@ -1,0 +1,6 @@
+.wrapper {
+  @include mx(auto);
+  @include px(16px);
+  width: 100%;
+  max-width: 1280px;
+}

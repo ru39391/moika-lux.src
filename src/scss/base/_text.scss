@@ -1,0 +1,60 @@
+h1 {
+  word-wrap: break-word;
+}
+
+p {
+  @extend %text-default;
+}
+
+a {
+  @extend %link-default;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+
+  li {
+  list-style: none;
+  }
+}
+
+.h1 {
+  @include h1;
+}
+
+.h2 {
+  @include h2;
+}
+
+.h3 {
+  @include h3;
+}
+
+.h4 {
+  @include h4;
+}
+
+.tdec-none {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+  text-decoration: none;
+  }
+}
+
+.tdec-underline {
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+  text-decoration: underline;
+  }
+}
+
+.font-weight-semibold {
+  font-weight: 500;
+}
+

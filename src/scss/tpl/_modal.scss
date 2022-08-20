@@ -1,0 +1,7 @@
+.modal-dialog {
+  &.modal-dialog_width_md {
+    @include media-breakpoint-up(sm) {
+      max-width: 416px;
+    }
+  }
+}

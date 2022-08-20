@@ -1,0 +1,19 @@
+.color-inherit {
+  @include color(inherit !important);
+}
+
+.color-white {
+  @include color(#fff !important);
+}
+
+.color-default {
+  @include color($color__default !important);
+}
+
+.color-brand {
+  @include color($color__brand !important);
+}
+
+.color-brand-light {
+  @include color($color__brand_light !important);
+}
