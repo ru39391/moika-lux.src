@@ -1,3 +1,5 @@
+@import 'base/variables';
+
 @import '~bootstrap/scss/bootstrap-reboot.scss';
 @import '~bootstrap/scss/bootstrap-grid.scss';
 //@import '~bootstrap/scss/modal';
@@ -8,15 +10,23 @@
 
 /* base */
 @import 'base/fonts';
-@import 'base/variables';
 @import 'base/mixins';
 @import 'base/extends';
 @import 'base/common';
 
 /* tpl */
 @import 'tpl/btn';
+@import 'tpl/logo';
 @import 'tpl/form';
+@import 'tpl/social';
 @import 'tpl/header';
+@import 'tpl/panel';
 @import 'tpl/footer';
 @import 'tpl/pathway';
+@import 'tpl/promo';
 @import 'tpl/content';
+@import 'tpl/section';
+@import 'tpl/contacts';
+@import 'tpl/map';
+@import 'tpl/price';
+@import 'tpl/feature';

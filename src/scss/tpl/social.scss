@@ -1,0 +1,15 @@
+.social__item {
+  @extend %flex-center;
+}
+
+.social__icon {
+  @include wh(18px);
+  @include fw(18px);
+  margin: 0 10px 0 0;
+}
+
+.social__title {
+  @include font(14px,500);
+  line-height: 18px;
+  text-decoration: underline;
+}

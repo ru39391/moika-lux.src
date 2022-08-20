@@ -5,35 +5,91 @@ block meta
 
 block promo
   .promo
-    +img(`content/top/top`,'promo__bg')
-    .container.d-flex.flex-wrap.px-0
-      .col-md-6.offset-md-1
+    .promo__bg
+      +img(`content/top/main`,'promo__cover')
+    .wrapper.d-flex.flex-wrap.align-items-center.px-0
+      .col-lg-5.col-md-8.offset-lg-1.offset-md-2.mb-4.mb-lg-0
+        .promo__title Современная
+          span.d-block автомойка в
+          span.d-block Санкт-Петербурге
         .row
-          .col-md-6.offset-md-1
-            .promo__title Современная автомойка в Санкт-Петербурге
-        .row
-          nav.social.col-md-3.offset-md-1
+          .social.d-flex.justify-content-between.col-xl-7.col-lg-9.col-md-8.col-sm-6.col-10
             a.social__item(href="#")
-              +icon('social-wapp')
+              +icon('social-wapp','social__icon')
+              span.social__title.color-white WhatsApp
             a.social__item(href="#")
-              +icon('social-tg')
-      .col-md-4
-        form#mainform.form(action="#" method="post")
-          .form__row
-            .form__item
-              input#mainform__name.form__field(type="text" value="" name="mainform__name" placeholder="Ваше имя")
-            .form__item
-              input#mainform__phone.form__field(type="text" value="" name="mainform__phone" placeholder="Телефон")
-            .form__item
-              input#mainform__nospam.form__checkbox(type="checkbox" checked)
-              label.form__label.form__label_el_checkbox(for="mainform__nospam")
-                span.form__toggler.form__toggler_el_checkbox
-                  +icon('checked')
-                | Я не робот
-            .form__item
-              button.btn(type="button") записаться
-          .row
-            .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей 
-              a.tdec-underline(href="#") политикой конфиденциальности.
+              +icon('social-tg','social__icon')
+              span.social__title.color-white Telegram
+      .col-xl-4.col-lg-5.col-md-8.offset-xl-1.offset-lg-0.offset-md-2
+        form#mainform.form.form_type_main.bg-white(action="#" method="post")
+          .form__title.font-weight-bold.color-default.text-center.mb-4 Запишитесь прямо сейчас
+          .form__item
+            input#mainform__name.form__field.form__field_border_color-brand(type="text" value="" name="mainform__name" placeholder="Ваше имя")
+          .form__item
+            input#mainform__phone.form__field.form__field_border_color-brand(type="text" value="" name="mainform__phone" placeholder="Телефон")
+          .form__item
+            input#mainform__nospam.form__checkbox(type="checkbox" checked)
+            label.form__label.form__label_el_checkbox(for="mainform__nospam")
+              span.form__toggler.form__toggler_el_checkbox.form__toggler_border_color-brand
+                +icon('checked','form__checked icon-fluid')
+              | Я не робот
+          .form__item.d-flex.justify-content-center
+            button.btn(type="button") записаться
+          .form__footer.color-default.text-center Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
+            a.tdec-underline(href="#") политикой конфиденциальности.
 
 block wrapper
+  .section.wrapper.d-flex.flex-wrap.px-0
+    .feature.col-md-4
+      .feature__icon
+        +icon('features-equipment')
+      .feature__title Новое оборудование
+      .row
+        .feature__desc.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1 Современное профессиональное оборудование автомойки обеспечивает качественную и бережную очистку автомобиля.
+    .feature.col-md-4
+      .feature__icon
+        +icon('features-careful')
+      .feature__title Бережное отношение
+      .row
+        .feature__desc.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1 Благодаря высокой квалификация наших специалистов ваш автомобиль  находится в надежных руках.
+    .feature.col-md-4
+      .feature__icon
+        +icon('features-timing')
+      .feature__title Быстрое исполнение
+      .row
+        .feature__desc.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1 Не надо ждать очереди, запишитесь на автомойку, когда это удобно. Мы дорожим вашем временем.
+
+  .map
+    script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&amp;amp;width=100%25&amp;amp;height=460&amp;amp;lang=ru_RU&amp;amp;scroll=false")
+
+  .section.wrapper.pb-0
+      .h3.text-center Мы используем только профессиональное оборудование от лучших производителей
+  .section.wrapper.d-flex.flex-wrap.px-0
+      .feature.col-lg-3.col-md-6.mb-md-4.mb-lg-0
+        .feature__icon.feature__icon_type_picture
+          img.feature__picture(src="/img/content/equipment/karcher.png" alt="")
+        .feature__title Аппарат высокого давления Karcher HD 9/20-4 M
+      .feature.col-lg-3.col-md-6.mb-md-4.mb-lg-0
+        .feature__icon.feature__icon_type_picture
+          img.feature__picture(src="/img/content/equipment/balma.png" alt="")
+        .feature__title Винтовой компрессор BALMA BRIO 11-10
+      .feature.col-lg-3.col-md-6
+        .feature__icon.feature__icon_type_picture
+          img.feature__picture(src="/img/content/equipment/tor.png" alt="")
+        .feature__title Турбосушка обдувка 2х турбинная TOR LT-1090C-1
+      .feature.col-lg-3.col-md-6
+        .feature__icon.feature__icon_type_picture
+          img.feature__picture(src="/img/content/equipment/tornador.png" alt="")
+        .feature__title Чистящий пистолет Tornador Black Pro
+
+  .promo
+    .promo__bg
+      +img(`bg/bottom`,'promo__cover')
+    .wrapper.zi-2
+      .promo__header.text-center
+        +icon('bubbles','promo__icon d-inline-block')
+      .row.font-weight-semibold.text-center
+        .col-lg-10.offset-lg-1
+          p Мойка машины является залогом ее эстетичного внешнего вида и максимально долгой эксплуатации. Как известно, на кузов авто постоянно воздействуют мелкие частички пыли и грязи, причем даже при аккуратной езде по городу. Если автомобиль активно эксплуатируют зимой, то дополнительным фактором риска становится воздействие песка, соли и химических веществ, которыми пользуются дорожные службы. Все это может стать причиной появления на кузове микротрещин, которые влияют на быстрое распространение коррозии, а также лишают автомобиль привычного блеска.
+
+          p Мы предлагаем широкий спектр услуг, который включает комплексную ручную и бесконтактную мойку, чистку багажника, а также уход за арками, фонарями, бамперами и прочими частями авто. Наши специалисты используют только высокотехнологичные составы и современные методики, что гарантирует высокое качество оказываемых услуг. Вас приятно удивят цены на мойку автомобиля, внимательный подход к клиентам и удобный график работы!

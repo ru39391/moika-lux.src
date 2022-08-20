@@ -19,61 +19,116 @@ html(lang="ru")
   body(class=pageClass)
     block header
       header.header
-        .container.d-flex.flex-wrap.px-0
-          .col-md-2
-            a.logo(href="/")
-              +icon('logo')
-          .col-md-10.d-flex.flex-wrap
+        .wrapper.d-flex.align-items-center.px-0
+          .col-xl-2
+            a.logo.color-white(href="/")
+              +icon('logo','logo__icon')
+          .col-xl-10.d-flex.align-items-center.justify-content-end.justify-content-xl-start
             nav.header__menu
               a.header__menu-link(href="#") Комплексная мойка
               a.header__menu-link(href="#") Химчистка
               a.header__menu-link(href="#") Полировка кузова
-              a.header__menu-link(href="#") Все услуги &gt;
-            .contacts
-              div.contacts__item
-                span.contacts__item-icon
-                  +icon('placemark')
-                | м. Ладожская
-                br
-                | пр. Ириновский, 14к1; лит Б
-              a.contacts__item.font-weight-bold(href="tel:+79111887575")
-                span.contacts__item-icon
-                  +icon('phone')
-                | +7 (911) 188-75-75
+              a.header__menu-link(href="#" data-toggle="toggler" data-target="#panel") Все услуги &gt;
+            .header__aside
+              button.header__toggler.d-block.d-xl-none.mr-3(type="button" data-toggle="toggler" data-target="#panel")
+                +icon('menu')
+              .header__contacts-holder
+                .contacts.d-flex.flex-wrap.align-items-center.justify-content-xl-between
+                  .contacts__item.color-white.mr-3.mr-xl-0
+                    span.contacts__item-icon.color-white
+                      +icon('placemark')
+                    span.contacts__item-caption
+                      | м. Ладожская
+                      br
+                      | пр. Ириновский, 14к1; лит Б
+                  a.contacts__item.color-white(href="tel:+79111887575")
+                    span.contacts__item-icon
+                      +icon('phone')
+                    span.contacts__item-caption.contacts__item-caption_font_bold +7 (911) 188-75-75
+              .header__btn-holder
+                button.btn.anchor-scrollto(type="button" data-target="section_form") записаться
+        #panel.panel
+          .wrapper.d-flex.flex-column.pos-rel.h-100.px-0
+            .panel__header
+              a.logo(href="/")
+                +icon('logo','logo__icon')
+            .d-flex.flex-column.flex-xl-row.flex-xl-wrap.justify-content-between.flex-grow-1
+              nav.col-xl-6.offset-xl-1.zi-2
+                ul.panel__menu
+                  li
+                    a.panel__menu-link(href="#") Комплексная мойка Люкс
+                  li
+                    a.panel__menu-link(href="#") Химчистка
+                  li
+                    a.panel__menu-link(href="#") Комплексная мойка Суперлюкс
+                  li
+                    a.panel__menu-link(href="#") Полировка кузова
+                  li
+                    a.panel__menu-link(href="#") Однофазная мойка кузова
+                  li
+                    a.panel__menu-link(href="#") Нанесение керамики
+                  li
+                    a.panel__menu-link(href="#") Двухфазная мойка кузова
+                  li
+                    a.panel__menu-link(href="#") Мойка иного транспорта
+                  li
+                    a.panel__menu-link(href="#") Уборка салона
+                  li
+                    a.panel__menu-link(href="#") Другие услуги
+              .col-xl-4.offset-xl-1.zi-2
+                .social
+                  a.social__item.mb-4(href="#")
+                    +icon('social-wapp','social__icon')
+                    span.social__title WhatsApp
+                  a.social__item.mb-4(href="#")
+                    +icon('social-tg','social__icon')
+                    span.social__title Telegram
+                .contacts.flex-column.align-items-start
+                  a.contacts__item.mb-4(href="tel:+79111887575")
+                    +icon('phone','contacts__icon color-brand-light')
+                    span.font-weight-semibold +7 (911) 188-75-75
+                  .contacts__item
+                    +icon('placemark','contacts__icon color-brand-light')
+                    span.font-weight-semibold пр. Ириновский, 14к1; лит Б
+              .panel__footer.col-xl-7
+                +icon('bg-bubbles')
+              button.panel__close(type="button" data-toggle="close")
+                +icon('close')
 
     block promo
 
     block wrapper
-      .section
-        .container.d-flex.px-0
-          .col-md-8.offset-md-2
-            .section__title Запишитесь прямо сейчас
-            .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
+      .section.section_form.bg-light.box-shadow.zi-2
+        .wrapper
+          .section__title Запишитесь прямо сейчас
+          .section__subtitle Просто оставьте свой номер и наши менеджеры свяжутся с вами в бижайшее время
+        .wrapper.d-flex.px-0
+          .col-xl-8.offset-xl-2.col-md-10.offset-md-1
             form#feedback.form(action="#" method="post")
               .form__row
-                .form__item
+                .form__item.mb-md-0
                   input#feedback__name.form__field(type="text" value="" name="feedback__name" placeholder="Ваше имя")
-                .form__item
+                .form__item.mb-md-0
                   input#feedback__phone.form__field(type="text" value="" name="feedback__phone" placeholder="Телефон")
-                .form__item
-                  input#feedback__nospam.form__checkbox(type="checkbox" checked)
+                .form__item.mb-md-0
+                  input#feedback__nospam.form__checkbox.form__checkbox_type_nospam(type="checkbox" checked)
                   label.form__label.form__label_el_checkbox(for="feedback__nospam")
                     span.form__toggler.form__toggler_el_checkbox
-                      +icon('checked')
+                      +icon('checked','form__checked icon-fluid')
                     | Я не робот
-                .form__item
-                  button.btn(type="button") записаться
-              .row
-                .form__footer.col-md-6.offset-md-6 Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей 
-                  a.tdec-underline(href="#") политикой конфиденциальности.
+                .form__item.mb-md-0
+                  button.btn.btn_mw_initial.mb-4(type="button") записаться
+                  .form__footer Нажимая кнопку вы соглашаетесь на обработку персональных данных в соответствии с нашей&nbsp;
+                    a.tdec-underline(href="#") политикой конфиденциальности.
 
-      .map
+      .map.zi-1
+        script(charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A74758b5ee4465194e02a444d5c93601d3a5240432e973a93791a8e41dc5c7c95&amp;amp;width=100%25&amp;amp;height=460&amp;amp;lang=ru_RU&amp;amp;scroll=false")
 
-      .section.d-flex
+      .section.section_pt_none.d-flex.flex-wrap.pos-rel.box-shadow
         .section__bg
-          +img('content/bottom/washing')
-        .container.d-flex.px-0
-          .content.col-md-5.offset-md-7
+          +img('content/bottom/washing','img-cover')
+        .wrapper.d-flex
+          .content.col-lg-5.offset-lg-7
             h1 Автомойка
             p Чистка салона автомобиля – это такая же важная часть ухода за «железным конем», как и его мойка. Салон – это весьма эксплуатируемая часть машины. В нем перевозят грузы, хранят полезные для автомобилиста безделушки, перевозят детей, которые не всегда отличаются аккуратностью, и домашних животных.
             p По коврикам топчутся в любую погоду, рискуя испортить грязью «родную» обивку пола. Все это приводит к необходимости регулярно проводить уборку салона.Разумеется, ее можно сделать и самостоятельно, но это потребует затрат сил, времени и денег, ведь для уборки потребуется автомобильная химия.
@@ -81,27 +136,30 @@ html(lang="ru")
     block footer
       - var services = ['Комплексная мойка Люкс','Комплексная мойка Суперлюкс','Однофазная мойка кузова','Двухфазная мойка кузова','Уборка салона','Химчистка','Полировка кузова','Нанесение керамики','Мойка иного транспорта','Другие услуги'];
       footer.footer
-        .container.d-flex.flex-wrap.px-0
-          nav.footer__nav.col-md-6.offset-md-1
-            each services__item in services
-              a.footer__nav-link(href="#") #{services__item}
-          .col-md-4.offset-md-1
-            a.logo(href="/")
-              +icon('logo')
-            nav.social
-              a.social__item(href="#")
-                +icon('social-wapp')
-                span.tdec-underline WhatsApp
-              a.social__item(href="#")
-                +icon('social-tg')
-                span.tdec-underline Telegram
+        .wrapper.d-flex.flex-wrap.px-0
+          nav.col-xl-6.col-lg-7.col-md-8.offset-xl-1
+            ul.footer__nav
+              each services__item in services
+                li
+                  a.footer__nav-link(href="#") #{services__item}
+          .col-md-4.offset-lg-1
+            a.logo.color-white.mb-2(href="/")
+              +icon('logo','logo__icon logo__icon_lg')
+            .social.d-flex
+              a.social__item.mb-2.mr-3(href="#")
+                +icon('social-wapp','social__icon')
+                span.social__title.color-white WhatsApp
+              a.social__item.mb-2(href="#")
+                +icon('social-tg','social__icon')
+                span.social__title.color-white Telegram
             .contacts
-              a.contacts__item(href="tel:+79111887575")
-                +icon('phone')
-                | +7 (911) 188-75-75
-              div.contacts__item
-                +icon('placemark')
+              a.contacts__item.mb-2(href="tel:+79111887575")
+                +icon('phone','contacts__icon color-brand-light')
+                span.font-weight-bold.color-white +7 (911) 188-75-75
+              .contacts__item.mb-2
+                +icon('placemark','contacts__icon color-brand-light')
                 | пр. Ириновский, 14к1; лит Б
+            a.footer__link(href="#") Политика конфиденциальности
 
       script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
       script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")

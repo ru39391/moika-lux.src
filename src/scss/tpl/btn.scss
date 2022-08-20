@@ -1,0 +1,31 @@
+.btn {
+  @include font(24px,700);
+  line-height: 1.2;
+  width: 100%;
+  max-width: 308px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+  background: $color__brand;
+  background: -moz-linear-gradient(-45deg,  #29a9e0 0%, #63cef5 42%, #29a9e0 60%, #29a9e0 100%);
+  background: -webkit-linear-gradient(-45deg,  #29a9e0 0%,#63cef5 42%,#29a9e0 60%,#29a9e0 100%);
+  background: linear-gradient(135deg,  #29a9e0 0%,#63cef5 42%,#29a9e0 60%,#29a9e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29a9e0', endColorstr='#29a9e0',GradientType=1 );
+
+  &.btn_mw_initial {
+    max-width: initial;
+  }
+
+  &:disabled {
+    cursor: default;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

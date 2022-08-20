@@ -1,0 +1,14 @@
+.content {
+  h1 {
+    margin: 0 0 16px;
+    color: $color__brand;
+
+    @include media-breakpoint-up(sm) {
+      @include h2;
+    }
+
+    @include media-breakpoint-only(xs) {
+      @include h3;
+    }
+  }
+}

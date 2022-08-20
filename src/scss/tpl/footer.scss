@@ -1,0 +1,25 @@
+.footer {
+  padding: 40px 16px;
+  color: #fff;
+  background-color: $color__default;
+}
+
+.footer__nav {
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.footer__nav-link {
+  @include color(#fff);
+  display: block;
+  margin: 0 0 24px;
+}
+
+.footer__link {
+  @include color(#fff);
+  @include fs-lh(12px,1.2);
+  text-decoration: underline;
+}
