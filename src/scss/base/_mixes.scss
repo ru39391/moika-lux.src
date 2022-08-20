@@ -1,0 +1,27 @@
+.pos-rel {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.zi-1 {
+  @extend %zi-1;
+}
+
+.zi-2 {
+  @extend %zi-2;
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.box-shadow-none {
+  box-shadow: none;
+}

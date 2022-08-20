@@ -34,7 +34,7 @@ html(lang="ru")
                 +icon('menu')
               .header__contacts-holder
                 .contacts.d-flex.flex-wrap.align-items-center.justify-content-xl-between
-                  .contacts__item.color-white.mr-3.mr-xl-0
+                  button.contacts__item.color-white.mr-3.mr-xl-0.anchor-scrollto(type="button" data-target="map")
                     span.contacts__item-icon.color-white
                       +icon('placemark')
                     span.contacts__item-caption
@@ -129,7 +129,7 @@ html(lang="ru")
           +img('content/bottom/washing','img-cover')
         .wrapper.d-flex
           .content.col-lg-5.offset-lg-7
-            h1 Автомойка
+            h1(data-toggle="modal" data-target="#success") Автомойка
             p Чистка салона автомобиля – это такая же важная часть ухода за «железным конем», как и его мойка. Салон – это весьма эксплуатируемая часть машины. В нем перевозят грузы, хранят полезные для автомобилиста безделушки, перевозят детей, которые не всегда отличаются аккуратностью, и домашних животных.
             p По коврикам топчутся в любую погоду, рискуя испортить грязью «родную» обивку пола. Все это приводит к необходимости регулярно проводить уборку салона.Разумеется, ее можно сделать и самостоятельно, но это потребует затрат сил, времени и денег, ведь для уборки потребуется автомобильная химия.
 
@@ -160,6 +160,15 @@ html(lang="ru")
                 +icon('placemark','contacts__icon color-brand-light')
                 | пр. Ириновский, 14к1; лит Б
             a.footer__link(href="#") Политика конфиденциальности
+
+      #success.modal.fade
+        .modal-dialog.modal-dialog_width_md
+          .modal-content.text-center.border-0.py-4.px-sm-4.px-2
+            .modal-header.h3.d-block.border-0 Ваша заявка отправлена!
+            .modal-body.h4.d-block.border-0 Наши менеджеры свяжутся с вами в бижайшее время для уточнения деталей.
+            .modal-footer.d-flex.justify-content-center.border-0
+              .col-md-4
+                button.btn.btn_mw_initial(type="button" data-dismiss="modal") Ок
 
       script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js")
       script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js")

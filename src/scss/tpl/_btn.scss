@@ -24,8 +24,16 @@
     max-width: initial;
   }
 
-  &:disabled {
+  &.btn_disabled {
     cursor: default;
     background: rgba(0, 0, 0, 0.2);
   }
+
+  &:disabled {
+    @extend .btn_disabled;
+  }
+}
+
+.btn-unstyled {
+  @extend %btn-default;
 }

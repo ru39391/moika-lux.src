@@ -9,7 +9,7 @@
 
 .price__heading {
   @include fs-lh(12px,1.3);
-  margin: 0 0 4px;
+  @include offset(0 0 4px,0 10px);
   color: $color__brand;
   overflow: hidden;
   text-overflow: ellipsis;
