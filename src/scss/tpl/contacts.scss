@@ -1,6 +1,8 @@
 .contacts__item {
+  @extend %btn-default;
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 .contacts__item-icon {

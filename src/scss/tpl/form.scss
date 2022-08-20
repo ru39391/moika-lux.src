@@ -45,6 +45,8 @@
 }
 
 .form__item {
+  position: relative;
+
   @include media-breakpoint-up(md) {
     margin: 0 0 24px;
   }
@@ -66,6 +68,11 @@
   &.form__field_border_color-brand {
     border-color: $color__brand;
   }
+
+  &.form__field_type_error {
+    color: $color__danger;
+    border-color: $color__danger;
+  }
 }
 
 .form__label {
@@ -77,6 +84,14 @@
     align-items: center;
     cursor: pointer;
   }
+}
+
+.form__error {
+  @include pos(100%,auto);
+  @include fs-lh(12px,1.2);
+  width: 100%;
+  margin: 6px 0 0;
+  color: $color__danger;
 }
 
 .form__toggler {

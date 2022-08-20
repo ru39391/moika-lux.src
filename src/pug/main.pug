@@ -24,11 +24,13 @@ block promo
         form#mainform.form.form_type_main.bg-white(action="#" method="post")
           .form__title.font-weight-bold.color-default.text-center.mb-4 Запишитесь прямо сейчас
           .form__item
-            input#mainform__name.form__field.form__field_border_color-brand(type="text" value="" name="mainform__name" placeholder="Ваше имя")
+            input#mainform__name.form__field.form__field_border_color-brand(type="text" value="" name="mainform__name" placeholder="Ваше имя" required)
+            .form__error.mainform__name-error
           .form__item
-            input#mainform__phone.form__field.form__field_border_color-brand(type="text" value="" name="mainform__phone" placeholder="Телефон")
+            input#mainform__phone.form__field.form__field_border_color-brand(type="text" value="" name="mainform__phone" placeholder="Телефон" required)
+            .form__error.mainform__phone-error
           .form__item
-            input#mainform__nospam.form__checkbox(type="checkbox" checked)
+            input#mainform__nospam.form__checkbox.form__checkbox_type_nospam(type="checkbox" checked)
             label.form__label.form__label_el_checkbox(for="mainform__nospam")
               span.form__toggler.form__toggler_el_checkbox.form__toggler_border_color-brand
                 +icon('checked','form__checked icon-fluid')
